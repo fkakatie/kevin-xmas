@@ -1,0 +1,112 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: #efefef;
+}
+
+input, button {
+    font-family: inherit;
+    background: inherit;
+}
+
+main {
+    width: 320px;
+    max-width: 98%;
+    margin: 0 auto;
+    margin-top: 2em;
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+p.instructions {
+    text-align: center;
+    font-size: 1.2em;
+}
+
+div.question {
+    /* border: 2px solid blue; */
+    width: 100%;
+    padding: 0.5em 0;
+    font-weight: bold;
+    text-align: center;
+}
+
+div.question::before{
+    content: "your riddle:";
+    color: #8066B3;
+    font-weight: normal;
+    font-style: italic;
+    letter-spacing: 0.2em;
+}
+
+div.answer {
+    /* border: 2px solid green; */
+    width: 100%;
+    padding: 0.5em 0;
+    text-align: center;
+}
+
+div.answer::before{
+    content: "your answer:";
+    color: #8066B3;
+    font-weight: normal;
+    font-style: italic;
+    letter-spacing: 0.2em;
+}
+
+div.answer input {
+    border: 0;
+    border-bottom: 2px solid black;
+    padding: 0.2em;
+    font-size: 1em;
+}
+
+div.submit {
+    /* border: 2px solid gold; */
+    padding: 0.5em 0;
+}
+
+div.submit input {
+    margin: 0;
+    padding: 0.2em 1em;
+    background: white;
+    border: 0;
+    border: 2px solid #309;
+    border-radius: 1em 0 0 1em;
+    font-size: 1em;
+    transition: 0.2s;
+}
+
+div.submit input:hover, div.submit input:focus {
+    outline: 0;
+    border-color: #809;
+}
+
+div.submit button {
+    margin: 0;
+    border: 0;
+    /* border: 2px solid #309; */
+    background: #309;
+    color: white;
+    padding: 0.3em 0.6em;
+    border-radius: 0 1em 1em 0;
+    font-size: 1em;
+    transition: 0.2s;
+}
+
+div.submit button:hover, div.submit button:focus {
+    outline: 0;
+    background: #809;
+    cursor: pointer;
+}
+
+.error {
+    background: #fab;
+}
