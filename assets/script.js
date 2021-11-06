@@ -26,7 +26,7 @@ const checkSubmission = (e) => {
 }
 
 const submitForm = async (code, email) => {
-    const url = `https://script.google.com/macros/s/AKfycbymAh6mzwmPxJ6rpz6sFh0qpW09EOVZkisCdw0k1Q66jnVEm2iPjn9HmhawrQqeqM1O/exec?code=${code}&email=${email}`;
+    const url = `https://script.google.com/macros/s/AKfycbwHHhF6zRXz1zNJgiPZWmEe8vZA-aCVh5YnZviQGMHYcp0X3GKPPwvC2x5BBl6L13I/exec?code=${code}&email=${email}`;
     const req = await fetch(url);
     const res = await req.json();
     alert(res.response);
