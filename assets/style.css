@@ -34,12 +34,12 @@ div.question {
     /* border: 2px solid blue; */
     width: 100%;
     padding: 0.5em 0;
-    font-weight: bold;
+    font-weight: normal;
     text-align: center;
 }
 
 div.question::before{
-    content: "your riddle:";
+    content: "your hint:";
     color: #8066B3;
     font-weight: normal;
     font-style: italic;
@@ -48,13 +48,14 @@ div.question::before{
 
 div.answer {
     /* border: 2px solid green; */
+    font-weight: bold;
     width: 100%;
     padding: 0.5em 0;
     text-align: center;
 }
 
 div.answer::before{
-    content: "your answer:";
+    content: "fill in the blank:";
     color: #8066B3;
     font-weight: normal;
     font-style: italic;
@@ -70,10 +71,12 @@ div.answer input {
 
 div.submit {
     /* border: 2px solid gold; */
+    display: flex;
     padding: 0.5em 0;
 }
 
 div.submit input {
+    width: 100%;
     margin: 0;
     padding: 0.2em 1em;
     background: white;
@@ -81,7 +84,7 @@ div.submit input {
     border: 2px solid #309;
     border-radius: 1em 0 0 1em;
     font-size: 1em;
-    transition: 0.2s;
+    transition: background 0.2s;
 }
 
 div.submit input:hover, div.submit input:focus {
@@ -89,10 +92,16 @@ div.submit input:hover, div.submit input:focus {
     border-color: #809;
 }
 
+div.submit input:hover + button, div.submit input:focus + button {
+    background: #809;
+}
+
+
 div.submit button {
+    width: 100px;
     margin: 0;
     border: 0;
-    /* border: 2px solid #309; */
+    /* border: 0.5px solid #309; */
     background: #309;
     color: white;
     padding: 0.3em 0.6em;
