@@ -1,26 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>happy birthday, kevin!</title>
     <link rel="stylesheet" href="assets/style.css">
 </head>
+
 <body>
+    <header>
+        <h1>20 Questions</h1>
+    </header>
     <main>
-        <p class="instructions">fill in this annual birthday quote to receive your gift (in an email)...</p>
-        <div class="answer">
-          <p>are you so excited to be <input type="text" name="code" id="code" placeholder="your answer here...">?</p>  
-        </div>
-        <div class="question">
-            <p>this is something very special that usually happens on your eighth birthday.</p>
-        </div>
-        <div class="submit">
-            <input type="email" name="email" id="email" placeholder="your email here..."><button id="submit">submit</button>
-        </div>
-        
+        <section class="instructions">
+            <p>complete this birthday quiz to receive your gift (in an email)...</p>
+        </section>
+        <section class="questions">
+            <div class="question">
+                <p>20 is the atomic number of what alkaline earth metal?</p>
+                <a href="https://www.youtube.com/watch?v=0On_quxxljY" target="_blank" class="hint">hint</a>
+                <ul>
+                    <li><label for="q1-calcium"><input type="radio" id="q1-calcium" name="q1" value="calcium"> calcium</label></li>
+                    <li><label for="q1-magnesium"><input type="radio" id="q1-magnesium" name="q1" value="magnesium"> magnesium</label></li>
+                    <li><label for="q1-helium"><input type="radio" id="q1-helium" name="q1" value="helium"> helium</label></li>
+                </ul>
+            </div>
+            <div class="question">
+                <p>what is the name of the 20-sided die used in games like dungeons and dragons?</p>
+                <a href="https://dungeonsdragons.fandom.com/wiki/Dice#d20" target="_blank" class="hint">hint</a>
+                <ul>
+                    <li><label for="q2-dodecahedron"><input type="radio" id="q2-dodecahedron" name="q2" value="dodecahedron"> dodecahedron</label></li>
+                    <li><label for="q2-icosahedron"><input type="radio" id="q2-icosahedron" name="q2" value="icosahedron"> icosahedron</label> </li>
+                    <li><label for="q2-polyhedron"><input type="radio" id="q2-polyhedron" name="q2" value="polyhedron"> polyhedron</label></li>
+                </ul>
+            </div>
+            <div class="question">
+                <p>president abraham lincoln started the gettysburg address, four _____ and seven years ago, using which old-timey word that means "group of twenty?"</p>
+                <a href="https://en.wikipedia.org/wiki/Gettysburg_Address" target="_blank" class="hint">hint</a>
+                <ul>
+                    <li><label for="q3-shake"><input type="radio" id="q3-shake" name="q3" value="shake"> shake</label></li>
+                    <li><label for="q3-semester"><input type="radio" id="q3-semester" name="q3" value="semester"> semester</label></li>
+                    <li><label for="q3-score"><input type="radio" id="q3-score" name="q3" value="score"> score</label></li>
+                </ul>
+            </div>
+            <button id="grade">check your answers</button>
+        </section>
+        <section class="success" aria-hidden="true">
+            <p class="big">you win!</p>
+            <p>thanks for playing 🙃</p>
+            <form>
+              <input type="email" name="email" id="email" placeholder="your email here..." />
+              <button id="submit">submit</button>
+            </form>
+        </section>
     </main>
-    
 </body>
+
 <script src="assets/script.js"></script>
+
 </html>
